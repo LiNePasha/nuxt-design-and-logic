@@ -42,7 +42,7 @@
           <v-text-field
             v-if="choosenCategory.propertyOptions[index].choosenOption?.id == 0"
             v-model="choosenCategory.propertyOptions[index].choosenOption.otherValue"
-            label="Please write your own value"
+            label="Please write your other value"
             :rules="[(value) => !!value || 'Required.']"
           ></v-text-field>
           <template v-if="choosenCategory.propertyOptions[index].children">
@@ -60,7 +60,7 @@
               <v-text-field
                 v-if="choosenCategory.propertyOptions[index].children[childIndex].choosenChildOption?.id == 0"
                 v-model="choosenCategory.propertyOptions[index].children[childIndex].choosenChildOption.otherValue"
-                label="Please write your own value"
+                label="Please write your other value"
                 :rules="[(value) => !!value || 'Required.']"
               ></v-text-field>
             </template>
