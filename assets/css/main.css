@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+.v-application {
+  background-color: #f6f4f5 !important;
+  font-family: "Nunito", sans-serif;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+.v-container {
+  max-width: unset !important;
+  width: 95% !important;
+}
+
+.wrapper {
+  border-radius: 21px;
+  background: #fff;
+  padding: 24px;
+}
+.v-btn {
+  text-transform: capitalize !important;
+}
+.gradint-btn {
+    background: linear-gradient(90deg, #D20653 0%, #FF951D 100%);
+    border-radius: 14px;
+}
+.filters button:not(.gradint-btn),
+.items .item-time {
+    width: 97px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  
+.filters button.active,
+.items .item-time {
+    border-color: #FF951D;
+    background: #FFF5E9;
+    color: #FF951D;
+  }
+
+  .items .item-time {
+    margin: 0;
+    border: 0;
+  }
+
+  @media (min-width: 768px) {
+    .md\:hidden {
+        display: none !important;
+    }
+  }
+    
+
+  /* navbar & nav links */
+  .nav-bar .logo .img {
+    width: 108px;
+}
+
+.nav-bar .links {
+    height: 100%;
+}
+
+.nav-bar .links .link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-bar .links .link a {
+    color: #828282;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-bar .links .link a.router-link-exact-active {
+    color: #D20653;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-bar .links .link a.router-link-exact-active::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 5px);
+    left: 0;
+    width: 100%;
+    height: 6px;
+    border-radius: 8px 8px 0px 0px;
+    background: #D20653;
+}
